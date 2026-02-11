@@ -42,7 +42,7 @@ void initializeLogger() {
     File logFile = SD.open(LOG_FILENAME, FILE_WRITE);
     if (logFile) {
       // Header with 9 PID columns (3 per rod)
-      logFile.println("date,time,state,set_rod1,set_rod2,set_rod3,live_rod1,live_rod2,live_rod3,Kp_rod1,Ki_rod1,Kd_rod1,pid_rod1,pid_rod2,pid_rod3,Kp_rod2,Ki_rod2,Kd_rod2,Kp_rod3,Ki_rod3,Kd_rod3,rel_rod1,rel_rod2,rel_rod3,rel_valve");
+      logFile.println("date,time,state,set_rod1,set_rod2,set_rod3,live_rod1,live_rod2,live_rod3,Kp_rod1,Ki_rod1,Kd_rod1,pid_rod1,Kp_rod2,Ki_rod2,Kd_rod2,pid_rod2,Kp_rod3,Ki_rod3,Kd_rod3,pid_rod3,rel_rod1,rel_rod2,rel_rod3,rel_valve");
       logFile.close();
       Serial.println("Created new log file with updated headers.");
     }
